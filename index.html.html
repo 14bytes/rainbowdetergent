@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)file:///C:/Users/msi/Downloads/rainbow_detergents_homepage_2.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Detergents - Premium Industrial Cleaning Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            color: #2c3e35;
+            line-height: 1.6;
+            background: #f8f9f7;
+        }
+
+        :root {
+            --primary: #1a2332;
+            --primary-light: #2d3e52;
+            --accent: #d4af37;
+            --accent-light: #e5c158;
+            --text-dark: #1a2332;
+            --text-muted: #5a6b63;
+            --border-light: #e0e6e0;
+            --white: #ffffff;
+        }
+
+        /* ========== HEADER & NAV ========== */
+        header {
+            background: var(--white);
+            border-bottom: 2px solid var(--accent);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-top {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.75rem 0;
+            font-size: 13px;
+            text-align: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .nav-top a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .nav-top a:hover {
+            color: var(--accent-light);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: none;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .phone-btn {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 0.65rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            display: none;
+        }
+
+        .phone-btn:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .phone-btn {
+                display: block;
+                padding: 0.5rem 1rem;
+                font-size: 12px;
+            }
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        .hero h1 .accent {
+            color: var(--accent);
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            color: #b0c4de;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            padding: 0.85rem 2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--primary);
+            border-color: var(--accent);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-light);
+            border-color: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .trust-badges {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .badge {
+            text-align: center;
+            font-size: 12px;
+            color: #b0c4de;
+        }
+
+        .badge-icon {
+            font-size: 24px;
+            margin-bottom: 0.35rem;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 3rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .cta-group {
+                gap: 0.75rem;
+            }
+
+            .btn {
+                padding: 0.7rem 1.5rem;
+                font-size: 14px;
+            }
+        }
+
+        /* ========== FEATURES ========== */
+        .features {
+            background: var(--white);
+            padding: 3rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 0.4rem;
+        }
+
+        .section-title .accent {
+            color: var(--accent);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-light);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.15);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 28px;
+            color: var(--accent);
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .feature-card {
+                padding: 1.2rem;
+            }
+        }
+
+        /* ========== PRODUCTS ========== */
+        .products {
+            background: #f8f9f7;
+            padding: 3rem 2rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-image {
+            height: 180px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 60px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 200px;
+            height: 200px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+        }
+
+        .product-image-svg {
+            height: 140px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            padding: 0.75rem;
+        }
+
+        .product-image-svg svg {
+            width: 100%;
+            height: 100%;
+            max-width: 140px;
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover .product-image-svg svg {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 0.75rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-name {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.9rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .product-desc {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+            flex-grow: 1;
+            line-height: 1.4;
+        }
+
+        .product-tag {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--primary);
+            padding: 0.25rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            width: fit-content;
+        }
+
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                gap: 0.8rem;
+            }
+
+            .product-image-svg {
+                height: 120px;
+            }
+
+            .product-info {
+                padding: 0.6rem;
+            }
+        }
+
+        /* ========== BRANDS ========== */
+        .brands {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+            align-items: center;
+        }
+
+        .brand-item {
+            height: 70px;
+            background: #f8f9f7;
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 13px;
+            transition: all 0.3s;
+            cursor: default;
+            padding: 0.5rem;
+        }
+
+        .brand-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .brand-item:hover {
+            border-color: var(--accent);
+            background: var(--white);
+        }
+
+        /* ========== ABOUT ========== */
+        .about {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 3rem 2rem;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .about h2 .accent {
+            color: var(--accent);
+        }
+
+        .about p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            color: #b0c4de;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .about-feature {
+            text-align: center;
+        }
+
+        .about-feature-icon {
+            font-size: 28px;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .about-feature h3 {
+            color: var(--accent);
+            font-size: 0.95rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .about-feature p {
+            font-size: 0.85rem;
+            color: #b0c4de;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .about {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .about h2 {
+                font-size: 1.5rem;
+            }
+
+            .about-features {
+                gap: 1.5rem;
+            }
+        }
+
+        /* ========== CTA SECTION ========== */
+        .cta-section {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-top: 3px solid var(--accent);
+        }
+
+        .cta-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .cta-section p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .cta-section {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .cta-buttons {
+                gap: 0.75rem;
+            }
+
+            .btn {
+                flex: 1;
+                min-width: 140px;
+            }
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 2.5rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-section h3 {
+            color: var(--accent);
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            font-size: 0.85rem;
+            color: #b0c4de;
+            line-height: 1.7;
+            text-decoration: none;
+            display: block;
+            transition: color 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 0.6rem;
+            align-items: flex-start;
+        }
+
+        .contact-item-icon {
+            color: var(--accent);
+            min-width: 18px;
+            font-size: 14px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding-top: 1rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #b0c4de;
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                padding: 2rem 1.5rem 1rem;
+            }
+
+            .footer-content {
+                gap: 1.5rem;
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ========== SCROLL ANIMATIONS ========== */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="nav-top">
+            Free Shipping All Over UAE | Call: <a href="tel:+97152245574">+971 52 245 0574</a>
+        </div>
+        <nav>
+            <a href="file:///C:/Users/msi/Downloads/rainbow_detergents_homepage_2.html#" class="logo">🌈 RAINBOW <span>DETERGENTS</span></a>
+            <ul class="nav-links">
+                <li><a href="file:///C:/Users/msi/Downloads/rainbow_detergents_homepage_2.html#products">Products</a></li>
+                <li><a href="file:///C:/Users/msi/Downloads/rainbow_detergents_homepage_2.html#about">About</a></li>
+                <li><a href="file:///C:/Users/msi/Downloads/rainbow_detergents_homepage_2.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="tel:+97152245574" class="phone-btn">Call Us</a>
+                <button class="menu-toggle">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Premium Industrial <span class="accent">Cleaning Solutions</span></h1>
+            <p class="hero-subtitle">
+                Engineered for demanding applications. Trusted by businesses across the UAE for over a decade. 
+                Contract manufacturing and private label services available.
+            </p>
+            <div class="cta-group">
+                <button class="btn btn-primary" onclick="document.getElementById(&#39;contact-section&#39;).scrollIntoView({behavior: &#39;smooth&#39;})">Explore Products</button>
+                <button class="btn btn-secondary" onclick="alert(&#39;Schedule a consultation&#39;)">Schedule Consultation</button>
+            </div>
+            <div class="trust-badges">
+                <div class="badge">
+                    <span class="badge-icon">✓</span>
+                    ISO Certified
+                </div>
+                <div class="badge">
+                    <span class="badge-icon">🚚</span>
+                    Free Shipping UAE
+                </div>
+                <div class="badge">
+                    <span class="badge-icon">⚡</span>
+                    Same-Day Orders
+                </div>
+                <div class="badge">
+                    <span class="badge-icon">🔧</span>
+                    Expert Support
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <div class="section-container">
+            <h2 class="section-title">Why Choose Rainbow <span class="accent">Detergents?</span></h2>
+            <p class="section-subtitle">Built for reliability, performance, and sustainability in industrial cleaning</p>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🏭</div>
+                    <h3>Industrial Grade</h3>
+                    <p>Formulated to handle the toughest cleaning challenges. Proven performance across AC coils, drain systems, and specialized surfaces.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🧪</div>
+                    <h3>Quality Assured</h3>
+                    <p>Every batch tested for consistency and safety. Compliant with international standards and certifications.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📦</div>
+                    <h3>Custom Solutions</h3>
+                    <p>Contract manufacturing and private label services. Tailor formulations to your exact specifications and brand.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Efficient logistics across the UAE. Same-day order processing and next-day delivery options available.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Innovation</h3>
+                    <p>Continuous R&amp;D to develop new formulations. Eco-conscious chemistry without compromise on performance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Dedicated Support</h3>
+                    <p>Expert team ready to help. Technical guidance, bulk ordering, and custom requirements handled professionally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products" id="products">
+        <div class="section-container">
+            <h2 class="section-title">Our <span class="accent">Product Range</span></h2>
+            <p class="section-subtitle">Comprehensive cleaning solutions for every application</p>
+            <div class="products-grid">
+                <!-- AC Bright - Spray Bottle -->
+                <div class="product-card">
+                    <div class="product-image-svg">
+                        <svg viewBox="0 0 160 240" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <lineargradient id="spray-bottle-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#1a2332;stop-opacity:1"></stop>
+                                    <stop offset="50%" style="stop-color:#2d3e52;stop-opacity:1"></stop>
+                                    <stop offset="100%" style="stop-color:#1a2332;stop-opacity:1"></stop>
+                                </lineargradient>
+                                <lineargradient id="label-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1"></stop>
+                                    <stop offset="100%" style="stop-color:#b8920a;stop-opacity:1"></stop>
+                                </lineargradient>
+                            </defs>
+                            <!-- Trigger pump -->
+                            <rect x="55" y="15" width="20" height="8" rx="2" fill="#333"></rect>
+                            <path d="M 65 23 Q 70 30 68 40" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"></path>
+                            <!-- Pump nozzle -->
+                            <rect x="62" y="8" width="6" height="8" fill="#555"></rect>
+                            <!-- Bottle neck -->
+                            <path d="M 55 40 L 50 50 L 50 60 L 110 60 L 110 50 L 105 40" fill="url(#spray-bottle-gradient)" stroke="#000" stroke-width="0.5"></path>
+                            <!-- Main bottle body - spray bottle shape -->
+                            <path d="M 50 60 Q 45 80 48 120 Q 50 160 52 180 Q 52 200 70 205 L 90 205 Q 108 200 108 180 Q 110 160 112 120 Q 115 80 110 60 Z" fill="url(#spray-bottle-gradient)" stroke="#000" stroke-width="0.8"></path>
+                            <!-- Bottle shine/reflection -->
+                            <ellipse cx="58" cy="90" rx="6" ry="25" fill="white" opacity="0.25"></ellipse>
+                            <ellipse cx="100" cy="140" rx="4" ry="18" fill="white" opacity="0.15"></ellipse>
+                            <!-- Label -->
+                            <rect x="52" y="110" width="56" height="60" rx="4" fill="url(#label-grad)" stroke="#1a2332" stroke-width="0.5"></rect>
+                            <!-- Label text -->
+                            <text x="80" y="130" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#1a2332">Your</text>
+                            <text x="80" y="142" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#1a2332">Brand</text>
+                            <text x="80" y="154" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#1a2332">Here</text>
+                            <text x="80" y="168" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#1a2332" opacity="0.8">AC Cleaner</text>
+                        </svg>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-tag">AC CLEANING</span>
+                        <div class="product-name">AC Bright (Coil Cleaner)</div>
+                        <p class="product-desc">Specialized formula for air conditioning coil cleaning and brightening.</p>
+                    </div>
+                </div>
+
+                <!-- AluBright - Trigger Spray Bottle -->
+                <div class="product-card">
+                    <div class="product-image-svg">
+                        <svg viewBox="0 0 160 240" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <lineargradient id="trigger-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#0d3b3f;stop-opacity:1"></stop>
+                                    <stop offset="50%" style="stop-color:#1b5558;stop-opacity:1"></stop>
+                                    <stop offset="100%" style="stop-color:#0d3b3f;stop-opacity:1"></stop>
+                                </lineargradient>
+                            </defs>
+                            <!-- Wider trigger pump -->
+                            <path d="M 50 20 L 60 15 L 65 25 L 70 35 Q 65 38 58 35 Q 52 32 50 20" fill="#444" stroke="#222" stroke-width="0.5"></path>
+                            <!-- Pump tube -->
+                            <line x1="62" y1="25" x2="65" y2="50" stroke="#333" stroke-width="2"></line>
+                            <!-- Nozzle -->
+                            <circle cx="65" cy="12" r="3" fill="#666"></circle>
+                            <!-- Bottle neck -->
+                            <path d="M 60 50 L 55 65 L 55 75 L 105 75 L 105 65 L 100 50" fill="url(#trigger-gradient)" stroke="#000" stroke-width="0.5"></path>
+                            <!-- Main bottle body - trigger bottle shape (wider) -->
+                            <path d="M 55 75 Q 48 95 50 140 Q 52 175 55 195 Q 55 208 75 210 L 85 210 Q 105 208 105 195 Q 108 175 110 140 Q 112 95 105 75 Z" fill="url(#trigger-gradient)" stroke="#000" stroke-width="0.8"></path>
+                            <!-- Shine -->
+                            <ellipse cx="62" cy="110" rx="5" ry="28" fill="white" opacity="0.22"></ellipse>
+                            <!-- Label -->
+                            <rect x="54" y="125" width="52" height="55" rx="3" fill="url(#label-grad)" stroke="#0d3b3f" stroke-width="0.5"></rect>
+                            <!-- Label text -->
+                            <text x="80" y="143" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#0d3b3f">Your</text>
+                            <text x="80" y="155" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#0d3b3f">Brand</text>
+                            <text x="80" y="167" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#0d3b3f">Here</text>
+                            <text x="80" y="178" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#0d3b3f" opacity="0.8">Evaporator</text>
+                        </svg>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-tag">EVAPORATOR</span>
+                        <div class="product-name">AluBright Coil Cleaner</div>
+                        <p class="product-desc">Advanced brightening formula for evaporator coils and aluminum surfaces.</p>
+                    </div>
+                </div>
+
+                <!-- LIYA Drain Opener - Plastic Jug -->
+                <div class="product-card">
+                    <div class="product-image-svg">
+                        <svg viewBox="0 0 160 240" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <lineargradient id="jug-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#8B3A3A;stop-opacity:1"></stop>
+                                    <stop offset="50%" style="stop-color:#A84545;stop-opacity:1"></stop>
+                                    <stop offset="100%" style="stop-color:#8B3A3A;stop-opacity:1"></stop>
+                                </lineargradient>
+                            </defs>
+                            <!-- Screw cap -->
+                            <circle cx="80" cy="18" r="8" fill="#d4af37"></circle>
+                            <circle cx="80" cy="18" r="6" fill="#e5c158"></circle>
+                            <!-- Cap ridges -->
+                            <line x1="73" y1="18" x2="87" y2="18" stroke="#b8920a" stroke-width="0.5"></line>
+                            <line x1="74" y1="15" x2="86" y2="15" stroke="#b8920a" stroke-width="0.5"></line>
+                            <line x1="74" y1="21" x2="86" y2="21" stroke="#b8920a" stroke-width="0.5"></line>
+                            <!-- Bottle neck -->
+                            <path d="M 65 28 L 60 42 L 60 55 L 100 55 L 100 42 L 95 28" fill="url(#jug-gradient)" stroke="#000" stroke-width="0.5"></path>
+                            <!-- Large plastic jug body -->
+                            <path d="M 60 55 Q 50 80 48 130 Q 47 170 50 195 Q 52 210 80 212 L 80 212 Q 108 210 110 195 Q 113 170 112 130 Q 110 80 100 55 Z" fill="url(#jug-gradient)" stroke="#000" stroke-width="0.8"></path>
+                            <!-- Handle -->
+                            <path d="M 98 70 Q 115 100 110 140" fill="none" stroke="url(#jug-gradient)" stroke-width="5" stroke-linecap="round"></path>
+                            <!-- Handle highlight -->
+                            <path d="M 98 70 Q 115 100 110 140" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.15"></path>
+                            <!-- Shine -->
+                            <ellipse cx="68" cy="100" rx="6" ry="35" fill="white" opacity="0.2"></ellipse>
+                            <!-- Warning stripe -->
+                            <rect x="58" y="145" width="44" height="3" fill="#d4af37" opacity="0.8"></rect>
+                            <!-- Label -->
+                            <rect x="56" y="110" width="48" height="50" rx="2" fill="url(#label-grad)" stroke="#8B3A3A" stroke-width="0.5"></rect>
+                            <!-- Label text -->
+                            <text x="80" y="128" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#8B3A3A">Your</text>
+                            <text x="80" y="140" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#8B3A3A">Brand</text>
+                            <text x="80" y="152" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#8B3A3A">Here</text>
+                        </svg>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-tag">DRAIN CARE</span>
+                        <div class="product-name">LIYA Drain Opener</div>
+                        <p class="product-desc">Powerful acid-base formula for stubborn drain blockages and deep cleaning.</p>
+                    </div>
+                </div>
+
+                <!-- MeBright Paint Remover - Large Cylinder Jug -->
+                <div class="product-card">
+                    <div class="product-image-svg">
+                        <svg viewBox="0 0 160 240" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <lineargradient id="cylinder-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#C85A17;stop-opacity:1"></stop>
+                                    <stop offset="50%" style="stop-color:#E07030;stop-opacity:1"></stop>
+                                    <stop offset="100%" style="stop-color:#C85A17;stop-opacity:1"></stop>
+                                </lineargradient>
+                            </defs>
+                            <!-- Flat top cap -->
+                            <ellipse cx="80" cy="22" rx="12" ry="4" fill="#d4af37"></ellipse>
+                            <!-- Cap edge -->
+                            <path d="M 68 22 L 72 25 L 88 25 L 92 22" fill="#e5c158"></path>
+                            <!-- Bottle neck (short for paint remover) -->
+                            <path d="M 70 26 L 65 38 L 65 50 L 95 50 L 95 38 L 90 26" fill="url(#cylinder-gradient)" stroke="#000" stroke-width="0.5"></path>
+                            <!-- Large cylindrical body -->
+                            <ellipse cx="80" cy="50" rx="15" ry="3" fill="#A04A13" opacity="0.6"></ellipse>
+                            <path d="M 65 50 L 65 190 Q 65 210 80 212 Q 95 210 95 190 L 95 50 Z" fill="url(#cylinder-gradient)" stroke="#000" stroke-width="0.8"></path>
+                            <!-- Shine on cylinder -->
+                            <ellipse cx="70" cy="110" rx="4" ry="40" fill="white" opacity="0.18"></ellipse>
+                            <!-- Bottom ellipse -->
+                            <ellipse cx="80" cy="190" rx="15" ry="4" fill="#A04A13" stroke="#000" stroke-width="0.5"></ellipse>
+                            <!-- Large label -->
+                            <rect x="56" y="105" width="48" height="65" rx="3" fill="url(#label-grad)" stroke="#C85A17" stroke-width="0.5"></rect>
+                            <!-- Label text -->
+                            <text x="80" y="128" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#C85A17">Your</text>
+                            <text x="80" y="141" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#C85A17">Brand</text>
+                            <text x="80" y="154" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#C85A17">Here</text>
+                            <text x="80" y="168" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#C85A17" opacity="0.8">Paint Remover</text>
+                        </svg>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-tag">REMOVER</span>
+                        <div class="product-name">MeBright Paint Remover</div>
+                        <p class="product-desc">Effective paint and coating removal for various surfaces.</p>
+                    </div>
+                </div>
+
+                <!-- Kitchen Degreaser - Spray Bottle (Wider) -->
+                <div class="product-card">
+                    <div class="product-image-svg">
+                        <svg viewBox="0 0 160 240" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <lineargradient id="degreaser-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#2D5016;stop-opacity:1"></stop>
+                                    <stop offset="50%" style="stop-color:#3D7023;stop-opacity:1"></stop>
+                                    <stop offset="100%" style="stop-color:#2D5016;stop-opacity:1"></stop>
+                                </lineargradient>
+                            </defs>
+                            <!-- Pump trigger -->
+                            <path d="M 50 20 L 62 15 L 68 28 L 70 40 Q 65 42 55 38 Q 48 32 50 20" fill="#444" stroke="#222" stroke-width="0.5"></path>
+                            <!-- Pump nozzle -->
+                            <rect x="62" y="10" width="5" height="8" fill="#555"></rect>
+                            <!-- Tube -->
+                            <line x1="65" y1="25" x2="65" y2="55" stroke="#333" stroke-width="2"></line>
+                            <!-- Bottle neck -->
+                            <path d="M 58 55 L 52 68 L 52 78 L 108 78 L 108 68 L 102 55" fill="url(#degreaser-gradient)" stroke="#000" stroke-width="0.5"></path>
+                            <!-- Spray bottle body (wider for degreaser) -->
+                            <path d="M 52 78 Q 45 100 48 145 Q 50 180 55 200 Q 55 212 80 215 L 80 215 Q 105 212 105 200 Q 110 180 112 145 Q 115 100 108 78 Z" fill="url(#degreaser-gradient)" stroke="#000" stroke-width="0.8"></path>
+                            <!-- Shine -->
+                            <ellipse cx="60" cy="115" rx="6" ry="32" fill="white" opacity="0.24"></ellipse>
+                            <!-- Label -->
+                            <rect x="54" y="128" width="52" height="58" rx="4" fill="url(#label-grad)" stroke="#2D5016" stroke-width="0.5"></rect>
+                            <!-- Label text -->
+                            <text x="80" y="148" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#2D5016">Your</text>
+                            <text x="80" y="160" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#2D5016">Brand</text>
+                            <text x="80" y="172" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#2D5016">Here</text>
+                            <text x="80" y="186" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#2D5016" opacity="0.8">Degreaser</text>
+                        </svg>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-tag">DEGREASER</span>
+                        <div class="product-name">Kitchen Degreaser</div>
+                        <p class="product-desc">Industrial-strength grease removal for kitchens and commercial spaces.</p>
+                    </div>
+                </div>
+
+                <!-- MeBright Hand Cleaner - Tall Cylindrical Dispenser -->
+                <div class="product-card">
+                    <div class="product-image-svg">
+                        <svg viewBox="0 0 160 240" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <lineargradient id="dispenser-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#1B4965;stop-opacity:1"></stop>
+                                    <stop offset="50%" style="stop-color:#2A6A8D;stop-opacity:1"></stop>
+                                    <stop offset="100%" style="stop-color:#1B4965;stop-opacity:1"></stop>
+                                </lineargradient>
+                            </defs>
+                            <!-- Pump head -->
+                            <ellipse cx="80" cy="15" rx="14" ry="6" fill="#d4af37"></ellipse>
+                            <path d="M 80 21 L 80 30" stroke="#d4af37" stroke-width="3"></path>
+                            <!-- Pump button -->
+                            <circle cx="80" cy="12" r="5" fill="#e5c158"></circle>
+                            <!-- Bottle neck -->
+                            <path d="M 70 30 L 65 42 L 65 55 L 95 55 L 95 42 L 90 30" fill="url(#dispenser-gradient)" stroke="#000" stroke-width="0.5"></path>
+                            <!-- Tall cylindrical body for hand cleaner dispenser -->
+                            <path d="M 65 55 Q 60 85 62 140 Q 63 175 65 200 Q 65 210 80 212 Q 95 210 95 200 Q 97 175 98 140 Q 100 85 95 55 Z" fill="url(#dispenser-gradient)" stroke="#000" stroke-width="0.8"></path>
+                            <!-- Vertical ridges on body -->
+                            <line x1="68" y1="60" x2="68" y2="195" stroke="#0a2a36" stroke-width="0.5" opacity="0.4"></line>
+                            <line x1="92" y1="60" x2="92" y2="195" stroke="#0a2a36" stroke-width="0.5" opacity="0.4"></line>
+                            <!-- Shine -->
+                            <ellipse cx="70" cy="120" rx="4" ry="45" fill="white" opacity="0.2"></ellipse>
+                            <!-- Base ring -->
+                            <ellipse cx="80" cy="208" rx="16" ry="3" fill="#0a2a36" opacity="0.5"></ellipse>
+                            <!-- Large label -->
+                            <rect x="56" y="100" width="48" height="70" rx="3" fill="url(#label-grad)" stroke="#1B4965" stroke-width="0.5"></rect>
+                            <!-- Label text -->
+                            <text x="80" y="122" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#1B4965">Your</text>
+                            <text x="80" y="135" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#1B4965">Brand</text>
+                            <text x="80" y="148" font-family="Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle" fill="#1B4965">Here</text>
+                            <text x="80" y="162" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#1B4965" opacity="0.8">Hand Cleaner</text>
+                            <text x="80" y="171" font-family="Arial, sans-serif" font-size="5" text-anchor="middle" fill="#1B4965" opacity="0.6">5L Dispenser</text>
+                        </svg>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-tag">HAND CARE</span>
+                        <div class="product-name">MeBright Hand Cleaner</div>
+                        <p class="product-desc">Heavy-duty hand cleaning with skin-care benefits. Available in 1L and 5L.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRANDS -->
+    <section class="brands">
+        <div class="section-container">
+            <h2 class="section-title">Our Trusted <span class="accent">Brand Portfolio</span></h2>
+            <p class="section-subtitle">Multiple trusted brands under one roof</p>
+            <div class="brands-grid">
+                <div class="brand-item">
+                    <img src="./Rainbow Detergents - Premium Industrial Cleaning Solutions_files/e94658_281a925d9df64e3cae17503b7645e752~mv2.jpg" alt="MeBright">
+                </div>
+                <div class="brand-item">
+                    <img src="./Rainbow Detergents - Premium Industrial Cleaning Solutions_files/e94658_ab3e260824df418aaf5a84d01e6f99f8~mv2.jpg" alt="LIYA">
+                </div>
+                <div class="brand-item">
+                    <img src="./Rainbow Detergents - Premium Industrial Cleaning Solutions_files/e94658_98ef849f395d4a5e85a6eb36bc7a69bb~mv2.jpg" alt="Clynz">
+                </div>
+                <div class="brand-item">
+                    <img src="./Rainbow Detergents - Premium Industrial Cleaning Solutions_files/e94658_517f640766304aea8658ab0cff8c57de~mv2.jpg" alt="ecoMe">
+                </div>
+                <div class="brand-item">
+                    <img src="./Rainbow Detergents - Premium Industrial Cleaning Solutions_files/e94658_f42dffb7648c4243b3546fc73a4a67ce~mv2.jpg" alt="Alubright">
+                </div>
+                <div class="brand-item">
+                    <img src="./Rainbow Detergents - Premium Industrial Cleaning Solutions_files/e94658_128cb1166d9b4893a89cde946171b888~mv2.jpg" alt="AC Bright">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2>Contract Manufacturing &amp;<span class="accent"> Private Label Services</span></h2>
+            <p>
+                Rainbow Detergents provides specialized contract manufacturing and private label solutions for businesses 
+                seeking high-quality, customized cleaning and personal care products under their own brand.
+            </p>
+            <p>
+                With state-of-the-art production facilities and a commitment to international quality standards, we deliver 
+                fully tailored solutions—from product formulation and packaging design to manufacturing and final delivery.
+            </p>
+            <div class="about-features">
+                <div class="about-feature">
+                    <div class="about-feature-icon">🧬</div>
+                    <h3>Custom Formulation</h3>
+                    <p>Develop unique products tailored to your specifications and target market.</p>
+                </div>
+                <div class="about-feature">
+                    <div class="about-feature-icon">📊</div>
+                    <h3>Quality Compliance</h3>
+                    <p>Full adherence to international standards, certifications, and safety protocols.</p>
+                </div>
+                <div class="about-feature">
+                    <div class="about-feature-icon">🎯</div>
+                    <h3>Scale Production</h3>
+                    <p>From pilot batches to high-volume manufacturing. Flexible, efficient scaling.</p>
+                </div>
+                <div class="about-feature">
+                    <div class="about-feature-icon">🌍</div>
+                    <h3>Packaging &amp; Branding</h3>
+                    <p>Design and produce packaging that reflects your brand identity perfectly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="contact-section">
+        <div class="cta-wrapper">
+            <h2>Ready to Transform Your Cleaning <span class="accent">Operations?</span></h2>
+            <p>Contact us today to discuss your requirements, request samples, or explore partnership opportunities.</p>
+            <div class="cta-buttons">
+                <a href="tel:+97152245574" class="btn btn-primary">Call Now</a>
+                <a href="mailto:sales@rainbowdetergents.com" class="btn btn-secondary">Email Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Rainbow Detergents</h3>
+                <p>Premium industrial cleaning solutions trusted by businesses across the UAE.</p>
+                <p style="font-size: 0.85rem; margin-top: 1rem; color: #888;">
+                    Sharjah, United Arab Emirates
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="file:///C:/Users/msi/Downloads/rainbow_detergents_homepage_2.html#products">Products</a>
+                <a href="file:///C:/Users/msi/Downloads/rainbow_detergents_homepage_2.html#about">About Us</a>
+                <a href="file:///C:/Users/msi/Downloads/rainbow_detergents_homepage_2.html#contact">Contact</a>
+                <a href="file:///C:/Users/msi/Downloads/rainbow_detergents_homepage_2.html#">Terms &amp; Conditions</a>
+            </div>
+            <div class="footer-section">
+                <h3 id="contact">Contact Us</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-item-icon">📱</span>
+                        <a href="tel:+97152245574">+971 52 245 0574</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item-icon">✉️</span>
+                        <a href="mailto:sales@rainbowdetergents.com">sales@rainbowdetergents.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item-icon">🌐</span>
+                        <a href="file:///C:/Users/msi/Downloads/rainbow_detergents_homepage_2.html#">www.rainbowdetergents.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Rainbow Detergents. All rights reserved. | Premium Industrial Cleaning Solutions</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .product-card, .brand-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Close mobile menu when link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').style.display = 'none';
+            });
+        });
+    </script>
+
+</body></html>
